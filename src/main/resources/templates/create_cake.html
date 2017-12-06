@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Create Cake</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Create cake</h1>
+	<form action="#" th:action="@{/cake}" th:object="${cake}" method="post">
+		<p>
+			Name: <select name="name">
+				<option
+					th:each="cakeType : ${T(com.waracle.cakemgr.enums.CakeType).values()}"
+					th:value="${cakeType.displayName}" 
+					th:field="*{name}"
+					th:text="${cakeType.displayName}"></option>
+			</select>
+		</p>
+		<p>
+			Price: <input type="text" th:field="*{price}" />
+		</p>
+		<p>
+			Quantity: <input type="text" th:field="*{quantity}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+</body>
+</html>

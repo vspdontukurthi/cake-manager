@@ -1,0 +1,33 @@
+####### cake-manager Spring Boot Application MVP ########
+
+# Project info
+
+# Maven used as build tool, java-8 and spring boot (latest version)
+# Developed spring mvc web application and simple forms developed using thymeleaf
+# Developed persistency layer using SpringData with JPA
+# Used by default JPA crud operations and written native queries when ever required
+# Developed unit tests, mocking controller tests and integration tests.
+# Used in-memory database h2 that used at application and test scope
+# No control on integration tests at this moment, we can do control using maven surefire plugin as different environments.
+
+# Build process
+
+# unzip the project in to local directory
+# do mvn clean install from command prompt : that pulls all required dependencies and build the project with run all tests then create jar at target folder
+# or do import unzipped project in to any JAVA IDE and do mvn clean install from IDE and run test package as test application then runs all the tests.
+# cd project then run this command:  java -jar target/cake-manager-1.0.0.jar (which starts spring boot application at port 9988)
+
+# open browser then copy paste this url : http://localhost:9989/ which gives all available cakes as inserted while starting application by db insertion scripts.
+# create cake using http://localhost:9989/ : this gives simple create cake view, I have taken name of cake, price and quantity.
+# name of cake is enum because type of cakes are static so defined as enum and select from dropdown.
+# if create same cake type then service invokes update API and update the quantity
+# save the cake in db if new one then.
+
+# This application extendable in terms price service and validations at front level and server side as well (4XX and 5XX).
+
+
+
+
+
+
+
